@@ -17,7 +17,26 @@ namespace ReadingWritingFiles
 
             //read file
             string path = @"map.txt";
+            string testPath = @"test.txt";
 
+            string testText = "Hi! I'm A test file that was written to in my program file!";
+
+            Console.WriteLine();
+
+            File.WriteAllText(testPath, testText);
+
+            string[] testFileContents = File.ReadAllLines(testPath);
+
+            for (int i = 0; i < testFileContents.Length; i++)
+            {
+                string line = testFileContents[i];
+                for (int j = 0; j < line.Length; j++)
+                {
+                    char character = line[j];
+                    Console.Write(character);
+                }
+                Console.WriteLine();
+            }
             Console.WriteLine();
 
             string[] mapRows;
