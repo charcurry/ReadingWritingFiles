@@ -16,10 +16,7 @@ namespace ReadingWritingFiles
             Console.WriteLine();
 
             //read file
-            string path = @"test.txt";
-            string input;
-            input = File.ReadAllText(path);
-            Console.WriteLine(input);
+            string path = @"map.txt";
 
             Console.WriteLine();
 
